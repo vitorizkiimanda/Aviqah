@@ -1,0 +1,83 @@
+<ion-header>
+    
+      <ion-navbar>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-6>
+                  <button item-right class="ButtonLewati" clear ion-button><p class="ButtonWordMasuk">Daftar</p></button>
+              </ion-col>
+              <ion-col col-6 text-right>
+                <button item-right class="ButtonLewati" ion-button color="AyoDermawan" (click)="lewati()"><p class="ButtonWordLewati">Lewati</p></button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-navbar>
+    
+    </ion-header>
+    
+    
+    <ion-content padding>
+    
+      <form #loginForm="ngForm" novalidate>
+        <ion-list >
+          <ion-item>
+            <ion-label><ion-icon name="md-mail"></ion-icon></ion-label>
+            <ion-input class="Head2" [(ngModel)]="email" pattern="[^@\]+@[^@\]+\.[^@\s]+" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off" placeholder="Email"
+              required>
+            </ion-input>
+          </ion-item>
+          <p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left class="Warning">
+          Email harus diisi
+          </p>
+
+          <ion-item>
+              <ion-label ><ion-icon name="md-person"></ion-icon></ion-label>
+              <ion-input class="Head2" [(ngModel)]="name" name="name" type="text" #nama="ngModel" spellcheck="false" autocapitalize="off" placeholder="Nama Lengkap"
+                required>
+              </ion-input>
+            </ion-item>
+            <p ion-text [hidden]="nama.valid || submitted == false" color="danger" padding-left class="Warning">
+            Nama harus diisi
+            </p>
+    
+          <ion-item>
+            <ion-label ><ion-icon name="md-key"></ion-icon></ion-label>
+            <ion-input class="Head2"  [(ngModel)]="password" name="pass" type="{{status}}" #pass="ngModel"  placeholder="Password" required>
+            </ion-input>
+            <button class="tombol" [hidden]="lihat == false" (click)="showPassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class='icon' color="primary2"> </ion-icon> </button>
+            <button class="tombol" [hidden]="lihat == true" (click)="hidePassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class='icon' color="primary2"> </ion-icon> </button>
+            
+    
+          </ion-item>
+          
+          <p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left class="Warning">
+            Password harus diisi
+          </p>
+        </ion-list>
+    
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button class="ButtonMasuk" ion-button color="AyoDermawan" (click)="masuk(loginForm)" block><p class="ButtonWord">Buat Akun</p></button>
+              </ion-col>
+            </ion-row>      
+        </ion-grid>
+        
+    
+        <ion-grid>
+          <ion-row>
+            <ion-col text-center>
+              <p class="Head">
+                <font color="black">Sudah punya akun?</font>
+                <a class="Link" (click)="signIn()"> Masuk.</a>
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    
+      </form>
+      
+      
+      
+    </ion-content>
+    
