@@ -1,18 +1,74 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+    <ion-grid>          
+          <ion-row >
+            <ion-col col-4>
+                <button ion-button menuToggle>
+                    <ion-icon name="menu"></ion-icon>
+                </button>           
+            </ion-col>
+            <ion-col col-4>    
+              <img class="LogoMuser" src="assets/pict/AviqahLogo.png"/>          
+            </ion-col>
+            <ion-col col-4 text-right>
+                <!-- <button clear ion-button class="ButtonRight"> -->
+                    <ion-icon color="dark" class="ButtonRight" name="notifications"></ion-icon>
+                <!-- </button>            -->
+            </ion-col>
+          </ion-row>
+    </ion-grid>
+
   </ion-navbar>
+    <ion-segment  class="SwipedTabs-tabs"  >
+        <ion-segment-button *ngFor='let tab of tabs ; let i = index ' value="IngoreMe" (click)="selectTab(i)"
+        [ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }' >
+          {{tab}}
+        </ion-segment-button>
+    </ion-segment>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>
+<ion-content text-left>
+    
+    
+      <!-- here is our dynamic line  "indicator"-->
+      <div id='indicator' class="SwipedTabs-indicatorSegment" [ngStyle]="{'width.%': (100/this.tabs.length)}"></div>
+    <div>
+      <ion-slides #SwipedTabsSlider  (ionSlideDrag)="animateIndicator($event)"
+                  (ionSlideWillChange)="updateIndicatorPosition()"
+                  (ionSlideDidChange)="updateIndicatorPosition()"
+                  (pan)="updateIndicatorPosition()"
+                  [pager]="false"
+            >
+        <ion-slide>
+          <div>
+            <p>tes tes apakah ini di atas?</p>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div>
+            <h1>Test 1 </h1>
+            <h1>Test 2 </h1>
+            <h1>Test 3 </h1>
+            <h1>Test 4 </h1>
+            <h1>Test 5 </h1>
+            <h1>Test 6 </h1>
+            <h1>Test 7 </h1>
+            <h1>Test 8 </h1>
+            <h1>Test 9 </h1>
+            <h1>Test 10 </h1>
+            <h1>Test 1 </h1>
+            <h1>Test 2 </h1>
+            <h1>Test 3 </h1>
+            <h1>Test 4 </h1>
+            <h1>Test 5 </h1>
+            <h1>Test 6 </h1>
+            <h1>Test 7 </h1>
+            <h1>Test 8 </h1>
+            <h1>Test 9 </h1>
+            <h1>Test 10 </h1>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </ion-content>
