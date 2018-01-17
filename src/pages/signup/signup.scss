@@ -1,5 +1,4 @@
-page-masuk {
-
+page-signup {
     .Logo {
         height: 40vw; 
         width: 40vw; 
@@ -36,7 +35,7 @@ page-masuk {
 
     .ButtonWordLewati {
         font-size: 5vw;
-        color: white;
+        color: #AB6ABA;
         text-transform: capitalize;
     }
 
@@ -48,7 +47,8 @@ page-masuk {
     
 
     .Warning {
-        font-size: 5vw;
+        font-size: 4vw;
+        font-style: italic;
     }
 
     .Head {
@@ -61,19 +61,16 @@ page-masuk {
     }
     .Link {
         font-size: 5vw;
-        color: #1e99d0;
+        color: #AB6ABA;
     }
 
-    .LinkLupaPassword {
-        font-size: 5vw;
-        color: #202020;
-        text-decoration: underline;
-        text-align: right;
-    }
 
-    .Lewati {
-        text-align: right;
-        color: black;
-    }
+    
 
+    .Title {
+        font-size: 7vw;
+        font-weight: 700;
+        color: white;
+        text-transform: capitalize;
+    }
 }

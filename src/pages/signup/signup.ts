@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { NgForm } from '@angular/forms';
-
-
-//import { Data } from '../../providers/data';
-import { Http } from '@angular/http';
-
-import { MasukPage } from '../masuk/masuk';
-import { TabsPage } from '../tabs/tabs';
+import { LoginPage } from '../login/login';
+import { HomePage } from '../home/home';
 
 @Component({
-  selector: 'page-daftar',
-  templateUrl: 'daftar.html',
+  selector: 'page-signup',
+  templateUrl: 'signup.html',
 })
-export class DaftarPage {
+export class SignupPage {
 
   submitted = false;
   status:string;
@@ -24,17 +20,16 @@ export class DaftarPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
+    private nativePageTransitions: NativePageTransitions,
     public loadCtrl: LoadingController,
-    public alertCtrl: AlertController,
-    
-    //public data: Data
-    ) {
+    public alertCtrl: AlertController,) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MasukPage');
-    this.status = "password";
+    console.log('ionViewDidLoad SignupPage');
   }
+
+
 
   masuk(form: NgForm) {
     
@@ -47,7 +42,8 @@ export class DaftarPage {
     if(form.valid){
       
       loading.present();
-      this.navCtrl.setRoot(TabsPage);
+      this.nativePageTransitions.fade(null);
+      this.navCtrl.setRoot(HomePage);
       loading.dismiss();     
 
     }
@@ -77,11 +73,13 @@ export class DaftarPage {
   }
 
   signIn() {
-    this.navCtrl.setRoot(MasukPage);
+    this.nativePageTransitions.fade(null);
+    this.navCtrl.setRoot(LoginPage);
   }
 
   lewati() {
-    this.navCtrl.setRoot(TabsPage);
+    this.nativePageTransitions.fade(null);
+    this.navCtrl.setRoot(HomePage);
   }
 
 }

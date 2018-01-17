@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,LoadingController,AlertController } from 'ionic-angular';
 import { NgForm } from '@angular/forms';
-
-
-//import { Data } from '../../providers/data';
-import { Http } from '@angular/http';
-
-import { DaftarPage } from '../daftar/daftar';
-import { TabsPage } from '../tabs/tabs';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
+import { SignupPage } from '../signup/signup';
+import { HomePage } from '../home/home';
 
 @Component({
-  selector: 'page-masuk',
-  templateUrl: 'masuk.html',
+  selector: 'page-login',
+  templateUrl: 'login.html',
 })
-export class MasukPage {
+export class LoginPage {
 
   submitted = false;
   status:string;
@@ -24,16 +20,14 @@ export class MasukPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public loadCtrl: LoadingController,
+    private nativePageTransitions: NativePageTransitions,
     public alertCtrl: AlertController,
-    
-    //public data: Data
-    ) {
+    public loadCtrl: LoadingController,) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MasukPage');
     this.status = "password";
+    console.log('ionViewDidLoad LoginPage');
   }
 
   masuk(form: NgForm) {
@@ -47,8 +41,13 @@ export class MasukPage {
     if(form.valid){
       
       loading.present();
-      this.navCtrl.setRoot(TabsPage);
-      loading.dismiss();     
+
+      //apiLogin
+
+      loading.dismiss();
+      this.Login();
+
+      
 
     }
     else{
@@ -62,7 +61,12 @@ export class MasukPage {
               alert.present();
 
     }
+
   }
+
+  // masuk() {
+  //   this.navCtrl.setRoot(TabsDonaturPage);
+  // }
 
   showPassword(){
     this.status = "text";
@@ -77,11 +81,13 @@ export class MasukPage {
   }
 
   signUp() {
-    this.navCtrl.setRoot(DaftarPage);
-  }
+    this.nativePageTransitions.fade(null);
+    this.navCtrl.setRoot(SignupPage);
+  }  
 
-  lewati() {
-    this.navCtrl.setRoot(TabsPage);
+  Login() {
+    this.nativePageTransitions.fade(null);
+    this.navCtrl.setRoot(HomePage);
   }
 
 }

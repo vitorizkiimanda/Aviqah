@@ -1,52 +1,50 @@
-import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+
 import { MyApp } from './app.component';
-
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
+import { ListPage } from '../pages/list/list';
 
-import { SplashPage } from '../pages/splash/splash';
-import { DaftarPage } from '../pages/daftar/daftar';
-import { MasukPage } from '../pages/masuk/masuk';
+import { LoginPage } from '../pages/login/login';
+import { ProfilPage } from '../pages/profil/profil';
+import { OnboardingPage } from '../pages/onboarding/onboarding';
+import { SignupPage } from '../pages/signup/signup';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
     HomePage,
-
-    SplashPage,
-    MasukPage,
-    DaftarPage,
-
-    TabsPage
+    LoginPage,
+    ProfilPage,
+    OnboardingPage,
+    SignupPage,
+    ListPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
     HomePage,
-
-    SplashPage,
-    MasukPage,
-    DaftarPage,
-
-    TabsPage
+    LoginPage,
+    ProfilPage,
+    OnboardingPage,
+    SignupPage,
+    ListPage
   ],
   providers: [
     StatusBar,
+    
+    NativePageTransitions,
+
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

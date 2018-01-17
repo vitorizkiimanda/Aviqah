@@ -1,5 +1,4 @@
-page-daftar {
-
+page-login {
     .Logo {
         height: 40vw; 
         width: 40vw; 
@@ -36,19 +35,28 @@ page-daftar {
 
     .ButtonWordLewati {
         font-size: 5vw;
+        color: #AB6ABA;
+        text-transform: capitalize;
+    }
+
+    .Title {
+        font-size: 7vw;
+        font-weight: 700;
         color: white;
         text-transform: capitalize;
     }
 
     .ButtonWordMasuk {
-        font-size: 5vw;
-        color: #202020;
+        font-size: 7vw;
+        font-weight: 700;
+        color: #AB6ABA;
         text-transform: capitalize;
     }
     
 
     .Warning {
-        font-size: 5vw;
+        font-size: 4vw;
+        font-style: italic;
     }
 
     .Head {
@@ -61,7 +69,7 @@ page-daftar {
     }
     .Link {
         font-size: 5vw;
-        color: #1e99d0;
+        color: #AB6ABA;
     }
 
     .LinkLupaPassword {
@@ -73,7 +81,6 @@ page-daftar {
 
     .Lewati {
         text-align: right;
-        color: black;
+        color: #202020;
     }
-
 }
