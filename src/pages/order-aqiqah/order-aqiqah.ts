@@ -8,6 +8,8 @@ import { DatePicker } from '@ionic-native/date-picker';
 })
 export class OrderAqiqahPage {
 
+  myDate: String = new Date().toISOString();
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
