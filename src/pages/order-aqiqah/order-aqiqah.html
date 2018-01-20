@@ -9,4 +9,36 @@
 
 <ion-content padding>
 
+    <span class="Header">Ananda</span>
+    <ion-list radio-group>
+        <ion-item no-lines>
+            <ion-label>Aviqah Andriani</ion-label>
+            <ion-radio checked="true" value="Aviqah Andriani"></ion-radio>
+        </ion-item>
+
+        <ion-item no-lines>
+            <ion-label>Andriani Aviqah</ion-label>
+            <ion-radio value="Andriani Aviqah"></ion-radio>
+        </ion-item>
+
+        <ion-item no-lines>
+            <ion-label>Aviqah Aviqah</ion-label>
+            <ion-radio value="Aviqah Aviqah"></ion-radio>
+        </ion-item>
+    </ion-list>
+    <hr>
+    <span class="Header">Alamat Pengantaran</span>
+    <ion-item no-lines>
+        <ion-textarea style="height: auto;"  [(ngModel)]="address" name="address" value="alamat default si user dari profilnya alamat default si user dari profilnya alamat default si user dari profilnya alamat default si user dari profilnya alamat default si user dari profilnya" type="text" #alamat="ngModel" required autosize></ion-textarea>
+    </ion-item>
+    <hr>
+    <span class="Header">Tanggal Pengiriman</span>
+    <ion-item no-lines>
+        <!-- <button class="ButtonMasuk" ion-button color="aviqahPurple" (click)="calendar()" block><p class="ButtonWord">Hari ini</p></button> -->
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    <hr>
+    
+
+
 </ion-content>
