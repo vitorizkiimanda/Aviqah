@@ -11,7 +11,7 @@ import { ProfilPage } from '../pages/profil/profil';
 import { OnboardingPage } from '../pages/onboarding/onboarding';
 import { SignupPage } from '../pages/signup/signup';
 import { AqiqahPage } from '../pages/aqiqah/aqiqah';
-
+import { OrderAqiqahPage } from '../pages/order-aqiqah/order-aqiqah';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,6 +26,7 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions';
     OnboardingPage,
     SignupPage,
     AqiqahPage,
+    OrderAqiqahPage,
     ListPage
   ],
   imports: [
@@ -41,6 +42,7 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions';
     OnboardingPage,
     SignupPage,
     AqiqahPage,
+    OrderAqiqahPage,
     ListPage
   ],
   providers: [

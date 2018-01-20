@@ -21,6 +21,7 @@ page-aqiqah {
     .content{
         font-size: 4vw;
         color: #202020;
+        text-align: justify;
 
         padding-top: 1vh;
         padding-bottom: 5vh;
@@ -32,5 +33,23 @@ page-aqiqah {
         -webkit-margin-after: 0em;
         -webkit-margin-start: 0px;
         -webkit-margin-end: 0px;
+    }
+
+    ion-footer{
+        height: 7vh;
+    }
+
+    .ButtonWord {
+        font-size: 6vw;
+        color: white;
+        text-transform: capitalize;
+
+        line-height: 7vh;
+
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        
     }
 }

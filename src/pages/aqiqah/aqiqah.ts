@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NativePageTransitions,NativeTransitionOptions } from '@ionic-native/native-page-transitions';
+import { OrderAqiqahPage } from '../order-aqiqah/order-aqiqah';
 
 
 @Component({
@@ -8,11 +10,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AqiqahPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private nativePageTransitions: NativePageTransitions) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AqiqahPage');
+  }
+
+  order(){
+    this.nativePageTransitions.fade(null);
+    this.navCtrl.push(OrderAqiqahPage);
   }
 
 }
