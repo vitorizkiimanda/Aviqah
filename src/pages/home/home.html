@@ -1,16 +1,16 @@
 <ion-header>
   <ion-navbar>
-    <ion-grid>          
-          <ion-row >
-            <ion-col col-4>
+    <ion-grid no-padding>          
+          <ion-row no-padding>
+            <ion-col col-4 no-padding>
                 <button ion-button menuToggle>
                     <ion-icon name="menu"></ion-icon>
                 </button>           
             </ion-col>
-            <ion-col col-4>    
+            <ion-col col-4 no-padding>    
               <img class="LogoMuser" src="assets/pict/AviqahLogo.png"/>          
             </ion-col>
-            <ion-col col-4 text-right>
+            <ion-col col-4 text-right no-padding>
                 <!-- <button clear ion-button class="ButtonRight"> -->
                     <ion-icon color="dark" class="ButtonRight" name="notifications"></ion-icon>
                 <!-- </button>            -->
@@ -19,19 +19,105 @@
     </ion-grid>
 
   </ion-navbar>
-    <ion-segment  class="SwipedTabs-tabs"  >
+  <ion-segment  [(ngModel)]="pages">
+    <ion-segment-button color="light" value="terbaru">
+      <div class="Header">TERBARU</div>
+    </ion-segment-button>
+    <ion-segment-button value="beranda">
+      <div class="Header">BERANDA</div>
+    </ion-segment-button>
+  </ion-segment>
+    <!-- <ion-segment  class="SwipedTabs-tabs"  >
         <ion-segment-button *ngFor='let tab of tabs ; let i = index ' value="IngoreMe" (click)="selectTab(i)"
         [ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }' >
           {{tab}}
         </ion-segment-button>
-    </ion-segment>
+    </ion-segment> -->
 </ion-header>
 
+<ion-content>
+  
+    <div [ngSwitch]="pages">
+      <ion-list *ngSwitchCase="'terbaru'">
+        <ion-slides pager>
 
+          <ion-slide>
+            <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+          </ion-slide>
+      
+          <ion-slide>
+            <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+          </ion-slide>
+      
+          <ion-slide>
+            <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+          </ion-slide>
+      
+        </ion-slides>     
+
+        <ion-scroll scrollX="true" direction="x">
+          <!-- <span *ngFor="let data of images"> -->
+              <img (click)='update(data)' class="options" src="assets/pict/icon1.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon2.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon3.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon4.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon1.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon2.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon3.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon4.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon1.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon2.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon3.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon4.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon1.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon2.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon3.png"/>
+              <img (click)='update(data)' class="options" src="assets/pict/icon4.png"/>
+          <!-- </span> -->
+        </ion-scroll>
+
+        <ion-grid class="Card">
+          <ion-row no-padding>
+            <ion-col col-6>
+              <span class="HeadContent">Aqiqah</span>
+            </ion-col>
+            <ion-col col-6 text-right>
+                <span class="Link">selengkapnya..</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <img class="imageCard" src="assets/pict/HomeSlide.png"/>
+
+        <ion-grid class="Card">
+            <ion-row no-padding>
+              <ion-col col-6>
+                <span class="HeadContent">Qurban</span>
+              </ion-col>
+              <ion-col col-6 text-right>
+                  <span class="Link">selengkapnya..</span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <img class="imageCard" src="assets/pict/HomeSlide.png"/>
+
+      </ion-list>
+
+
+      <!-- -------------------------------------------- -->
+  
+      <ion-list *ngSwitchCase="'beranda'">
+        
+        wowowowwo
+  
+      </ion-list>
+    </div>
+  
+  </ion-content>
+
+<!-- 
 <ion-content text-left>
     
     
-      <!-- here is our dynamic line  "indicator"-->
       <div id='indicator' class="SwipedTabs-indicatorSegment" [ngStyle]="{'width.%': (100/this.tabs.length)}"></div>
     <div>
       <ion-slides #SwipedTabsSlider  (ionSlideDrag)="animateIndicator($event)"
@@ -42,7 +128,21 @@
             >
         <ion-slide>
           <div>
-            <p>tes tes apakah ini di atas?</p>
+            <ion-slides pager>
+
+              <ion-slide>
+                <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+              </ion-slide>
+          
+              <ion-slide>
+                <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+              </ion-slide>
+          
+              <ion-slide>
+                <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+              </ion-slide>
+          
+            </ion-slides>
           </div>
         </ion-slide>
         <ion-slide>
@@ -71,4 +171,4 @@
         </ion-slide>
       </ion-slides>
     </div>
-  </ion-content>
+  </ion-content> -->

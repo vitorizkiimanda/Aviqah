@@ -13,44 +13,137 @@ page-home {
         right: 2vw;
     }
 
-    .SwipedTabs-indicatorSegment
-    {
-        -webkit-transition: 0.3s all;
-        -moz-transition:  0.3s all;
-        -o-transition:  0.3s all;
-        transition:  0.3s all;
-        transform-origin: top 0 left 0;
-        height: 1px;
-	    position: relative;
-	    top: -2px;
-	    background-color: black !important;
-    }
-    .SwipedTabs-tabs ion-segment-button
-    {
-    	border:none !important;
-    	color:gray!important;
-    	background-color:#202020!important;
-    }
-     .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab
-    {
-        color:white !important;
-    	border-bottom: solid 2px white  !important;
-    }
-    .SwipedTabs-tabs
-    {
-    	// border-bottom: solid 1px black  !important;
-    }
-
-
-    .swiper-slide:not(.swiper-slide-active) > div {
-        display:none;
-    }
-
-    .slide-zoom {
-        text-align: left;
-        display: block;
+    //slider
+    ion-slides {
+        background: white;
         width: 100%;
+        height: 25vh;
+        display: block;
     }
+    .slide-image {
+        width: 100vw;
+        height: 100%;
+    }
+    .swiper-pagination-bullet-active{
+        background: #AB6ABA;
+        opacity: 1;
+    }
+    //slider ^^^
+
+    // scroller
+    ion-scroll {
+        width: 100vw;
+        display: inline-block;
+        height: 13vh;
+    }
+
+    .scroll-zoom-wrapper{
+        white-space: nowrap;
+    }
+
+    .options {
+        margin-top: 3vh;
+        height: 10vh;
+        width : auto;
+    }
+
+    // scroller^^^
+
+    .Header {
+        font-size: 5vw;
+    }
+
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+        color:white;
+        border-color: white;
+        opacity: 1;
+    }
+
+    .segment-md{
+        color: gray;
+        background-color: #202020;
+    }
+
+    .segment-md .segment-button {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: 0;
+        height: 4.2rem;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: rgba(0, 0, 0, 0.1);
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 4rem;
+        text-transform: uppercase;
+        color: gray;
+        background-color: transparent;
+        opacity: 0.7;
+        -webkit-transition: 100ms all linear;
+        transition: 100ms all linear;
+        padding: 0 6px;
+    }
+
+    .HeadContent{
+        font-size: 6vw;
+        font-weight: 500;
+        color: #202020;
+    }
+
+    .Card{
+        margin-top:2vh;
+    }
+    .Link {
+        text-align: right;
+        font-size: 5vw;
+        color: #6acbf5;
+    }
+
+    .imageCard{
+        width: 100vw;
+        height: 25vh;
+    }
+
+    // .SwipedTabs-indicatorSegment
+    // {
+    //     -webkit-transition: 0.3s all;
+    //     -moz-transition:  0.3s all;
+    //     -o-transition:  0.3s all;
+    //     transition:  0.3s all;
+    //     transform-origin: top 0 left 0;
+    //     height: 1px;
+	//     position: relative;
+	//     top: -2px;
+	//     background-color: black !important;
+    // }
+    // .SwipedTabs-tabs ion-segment-button
+    // {
+    // 	border:none !important;
+    // 	color:gray!important;
+    // 	background-color:#202020!important;
+    // }
+    //  .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab
+    // {
+    //     color:white !important;
+    // 	border-bottom: solid 2px white  !important;
+    // }
+    // .SwipedTabs-tabs
+    // {
+    // 	// border-bottom: solid 1px black  !important;
+    // }
+
+
+    // .swiper-slide:not(.swiper-slide-active) > div {
+    //     display:none;
+    // }
+
+    // .slide-zoom {
+    //     text-align: left;
+    //     display: block;
+    //     width: 100%;
+    // }
 
 
 }
