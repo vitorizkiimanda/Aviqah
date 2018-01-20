@@ -1,5 +1,7 @@
 import { Component,ViewChild } from '@angular/core';
 import { NavController,Slides } from 'ionic-angular';
+import { NativePageTransitions,NativeTransitionOptions } from '@ionic-native/native-page-transitions';
+import { AqiqahPage } from '../aqiqah/aqiqah';
 
 @Component({
   selector: 'page-home',
@@ -15,11 +17,18 @@ export class HomePage {
   pages: string = "terbaru";
 
  
-  constructor(public navCtrl: NavController) {
+  constructor(
+    public navCtrl: NavController,
+    private nativePageTransitions: NativePageTransitions) {
   	// this.tabs=["page1","page2"];
   }
   ionViewDidEnter() {
     // this.SwipedTabsIndicator = document.getElementById("indicator");
+  }
+
+  gotoAqiqah() {
+    this.nativePageTransitions.fade(null);
+    this.navCtrl.push(AqiqahPage);
   }
 
 

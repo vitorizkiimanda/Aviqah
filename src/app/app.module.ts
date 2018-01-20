@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { ProfilPage } from '../pages/profil/profil';
 import { OnboardingPage } from '../pages/onboarding/onboarding';
 import { SignupPage } from '../pages/signup/signup';
+import { AqiqahPage } from '../pages/aqiqah/aqiqah';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,6 +25,7 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions';
     ProfilPage,
     OnboardingPage,
     SignupPage,
+    AqiqahPage,
     ListPage
   ],
   imports: [
@@ -38,6 +40,7 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions';
     ProfilPage,
     OnboardingPage,
     SignupPage,
+    AqiqahPage,
     ListPage
   ],
   providers: [
