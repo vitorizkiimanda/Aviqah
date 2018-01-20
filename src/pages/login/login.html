@@ -22,11 +22,11 @@
 		<ion-list >
       <ion-item>
         <ion-label><ion-icon name="md-mail"></ion-icon></ion-label>
-        <ion-input class="Head2" [(ngModel)]="email" pattern="[^@\]+@[^@\]+\.[^@\s]+" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off" placeholder="Email"
+        <ion-input class="Head2" [(ngModel)]="email" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off" placeholder="Email"
         required></ion-input>
       </ion-item>
 			<p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left class="Warning">
-			Email harus diisi
+			Email harus valid
 			</p>
 
 			<ion-item>
@@ -69,7 +69,7 @@
       <ion-row>
           <ion-col text-right>
             <br />
-            <button class="ButtonMasuk" ion-button color="facebook" (click)="masuk(loginForm)" block icon-left>
+            <button class="ButtonMasuk" ion-button color="facebook" (click)="lewati()" block icon-left>
               <ion-icon name="logo-facebook"></ion-icon>  
               <p class="ButtonWord">Masuk dengan Facebook</p>
             </button>

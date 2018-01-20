@@ -90,4 +90,9 @@ export class LoginPage {
     this.navCtrl.setRoot(HomePage);
   }
 
+  lewati(){
+    this.nativePageTransitions.fade(null);
+    this.navCtrl.setRoot(HomePage);
+  } 
+
 }
