@@ -106,6 +106,53 @@ page-home {
         height: 25vh;
     }
 
+
+
+    .StatusCard{
+        background-color: white;
+        margin-bottom: 1vh;
+    }
+    .StatusPP{
+        display: block;
+        margin:auto;
+        border-radius: 100%;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        height: 6vh;
+        width: auto;
+    }
+    .StatusSender{
+        font-size: 5vw;
+        color: #202020;
+        display: block;
+        padding-top: 1vh;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 1px;
+        -webkit-margin-end: 0px;
+    }
+    .StatusImg{
+        width: 100vw;
+        height: 100%;
+    }
+    .StatusText{
+        font-size: 4vw;
+        color: #202020;
+
+        padding-top: 1vh;
+        padding-bottom: 5vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+    }
+
+    p {
+        display: block;
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+
     // .SwipedTabs-indicatorSegment
     // {
     //     -webkit-transition: 0.3s all;

@@ -79,7 +79,8 @@
         <ion-grid class="Card">
           <ion-row no-padding>
             <ion-col col-6>
-              <span class="HeadContent">Aqiqah</span>
+              <span class="HeadContent">Aqiqah 
+                  {{backgroundColor}}</span>
             </ion-col>
             <ion-col col-6 text-right>
                 <span class="Link">selengkapnya..</span>
@@ -97,7 +98,7 @@
                   <span class="Link">selengkapnya..</span>
               </ion-col>
             </ion-row>
-          </ion-grid>
+        </ion-grid>
           <img class="imageCard" src="assets/pict/HomeSlide.png"/>
 
       </ion-list>
@@ -105,9 +106,37 @@
 
       <!-- -------------------------------------------- -->
   
-      <ion-list *ngSwitchCase="'beranda'">
+      <ion-list *ngSwitchCase="'beranda'" style="background-color: #eaeceb">
         
-        wowowowwo
+        <div class="StatusCard">
+          <ion-grid no-padding>
+            <ion-row no-padding>
+              <ion-col col-2 no-padding>
+                <img class="StatusPP" src="assets/pict/Profil.png"/>
+              </ion-col>
+              <ion-col col-10 no-padding>
+                <p class="StatusSender">Dakwah Islam</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <img class="StatusImg" src="assets/pict/HomeSlide.png"/>
+          <p no-padding class="StatusText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id lectus hendrerit, efficitur purus vitae, fermentum ipsum. Maecenas suscipit varius nunc non mattis. Quisque convallis enim et massa lacinia elementum.</p>
+        </div>
+
+        <div class="StatusCard">
+            <ion-grid no-padding>
+              <ion-row no-padding>
+                <ion-col col-2 no-padding>
+                  <img class="StatusPP" src="assets/pict/Profil.png"/>
+                </ion-col>
+                <ion-col col-10 no-padding>
+                  <p class="StatusSender">Dakwah Islam</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <img class="StatusImg" src="assets/pict/HomeSlide.png"/>
+            <p class="StatusText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id lectus hendrerit, efficitur purus vitae, fermentum ipsum. Maecenas suscipit varius nunc non mattis. Quisque convallis enim et massa lacinia elementum.</p>
+          </div>
   
       </ion-list>
     </div>

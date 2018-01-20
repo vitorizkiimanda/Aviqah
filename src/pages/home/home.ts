@@ -22,6 +22,8 @@ export class HomePage {
     // this.SwipedTabsIndicator = document.getElementById("indicator");
   }
 
+
+
   // selectTab(index) {    
   //   this.SwipedTabsIndicator.style.webkitTransform = 'translate3d('+(100*index)+'%,0,0)';
   //   this.SwipedTabsSlider.slideTo(index, 500);
