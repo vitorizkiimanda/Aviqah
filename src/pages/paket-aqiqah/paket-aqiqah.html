@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar color="aviqahPurple" text-center>
+      <ion-title><span class="Title">Paket Aqiqah</span><button ion-button clear class="invisibleButton"></button></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-slides pager>
+
+    <ion-slide>
+      <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+    </ion-slide>
+
+    <ion-slide>
+      <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+    </ion-slide>
+
+    <ion-slide>
+      <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+    </ion-slide>
+
+  </ion-slides>
+
+  <ion-item no-lines>
+    <ion-label><span class="Content">Kambing 1</span></ion-label>
+    <ion-select [(ngModel)]="paket_kambing1" interface="popover">
+      <ion-option value="paket1">Paket 1</ion-option>
+      <ion-option value="paket2">Paket 2</ion-option>
+      <ion-option value="paket3">Paket 3</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item no-lines>
+    <ion-label><span class="Content">Kambing 2</span></ion-label>
+    <ion-select [(ngModel)]="paket_kambing2" interface="popover">
+      <ion-option value="paket1">Paket 1</ion-option>
+      <ion-option value="paket2">Paket 2</ion-option>
+      <ion-option value="paket3">Paket 3</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <button class="ButtonOptions" ion-button color="aviqahPurple" (click)="gotoPayment()" block><p class="ButtonWord">Lanjut Pembayaran</p></button>
+
+</ion-content>

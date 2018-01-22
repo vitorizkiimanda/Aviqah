@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatePicker } from '@ionic-native/date-picker';
+import { PaketAqiqahPage } from '../paket-aqiqah/paket-aqiqah';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
+import { PembayaranPage } from '../pembayaran/pembayaran';
 
 @Component({
   selector: 'page-order-aqiqah',
@@ -13,7 +16,8 @@ export class OrderAqiqahPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private datePicker: DatePicker) {
+    private datePicker: DatePicker,
+    private nativePageTransitions: NativePageTransitions) {
   }
 
   ionViewDidLoad() {
@@ -29,6 +33,16 @@ export class OrderAqiqahPage {
       date => console.log('Got date: ', date),
       err => console.log('Error occurred while getting date: ', err)
     );
+  }
+
+  gotoPaket(){
+    this.nativePageTransitions.fade(null);
+    this.navCtrl.push(PaketAqiqahPage);
+  }
+
+  gotoPayment(){
+    this.nativePageTransitions.fade(null);
+    this.navCtrl.push(PembayaranPage);
   }
 
 }

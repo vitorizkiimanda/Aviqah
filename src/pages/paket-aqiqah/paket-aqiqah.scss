@@ -1,0 +1,45 @@
+page-paket-aqiqah {
+    .invisibleButton {
+        height:10px;
+        width:60px;
+    }
+
+    .Title{
+        font-size: 7vw;
+        color: white;   
+    }
+
+    //slider
+    ion-slides {
+        background: white;
+        width: 100%;
+        height: 50vh;
+        display: block;
+    }
+    .slide-image {
+        width: 100vw;
+        height: 50vh;
+    }
+    .swiper-pagination-bullet-active{
+        background: #AB6ABA;
+        opacity: 1;
+    }
+    //slider ^^^
+
+    .Content{
+        color: #202020;
+        font-size: 4.5vw;
+    }
+
+    .ButtonWord {
+        font-size: 5vw;
+        text-transform: capitalize;
+    }
+
+    .ButtonOptions {
+        margin: auto;
+        margin-top:5vh;
+        height: 10vw !important;
+        width: 90%;
+    }
+}

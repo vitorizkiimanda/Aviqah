@@ -1,0 +1,43 @@
+page-pembayaran {
+    .invisibleButton {
+        height:10px;
+        width:60px;
+    }
+
+    .Title{
+        font-size: 7vw;
+        color: white;   
+    }
+    .Content{
+        color: #202020;
+        font-size: 4.5vw;
+    }
+    .Header{
+        font-size: 6vw;
+    }
+    .KodeUnik{
+        margin-top: 5vh;
+    }
+    .code{
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .individualCode {
+        padding: 10px;
+        margin: 10px;
+        font-size: 7vw;
+        background-color: #c0ccdab6;
+        color: #202020;
+    }
+
+    .ButtonWord {
+        font-size: 5vw;
+        text-transform: capitalize;
+    }
+
+    .ButtonOptions {
+        margin-top:5vh;
+        height: 10vw !important;
+        // width: 100%;
+    }
+}

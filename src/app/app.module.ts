@@ -18,6 +18,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { DatePicker } from '@ionic-native/date-picker';
 import { Autosize } from '../directives/autosize/autosize';
+import { PembayaranPage } from '../pages/pembayaran/pembayaran';
+import { PaketAqiqahPage } from '../pages/paket-aqiqah/paket-aqiqah';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { Autosize } from '../directives/autosize/autosize';
     AqiqahPage,
     OrderAqiqahPage,
     Autosize,
+    PembayaranPage,
+    PaketAqiqahPage,
     ListPage
   ],
   imports: [
@@ -46,6 +50,8 @@ import { Autosize } from '../directives/autosize/autosize';
     SignupPage,
     AqiqahPage,
     OrderAqiqahPage,
+    PembayaranPage,
+    PaketAqiqahPage,
     ListPage
   ],
   providers: [

@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-navbar color="aviqahPurple" text-center>
+      <ion-title><span class="Title">Pembayaran</span><button ion-button clear class="invisibleButton"></button></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <span class="Header">Detil-detil nya apa aja</span>
+
+    <hr>
+    <ion-grid no-padding>
+        <ion-row no-padding>
+            <ion-col col-3 no-padding>
+                <span class="Content">Total</span>
+            </ion-col>
+            <ion-col col-9 text-right no-padding>
+                <span class="Content">Rp. {{total_pemesanan}}</span>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <div class="KodeUnik" text-center>
+      <span class="Content">Kode Unik Sukarela</span>
+      <div class="code">
+        <span class="individualCode">{{firstCode}}</span>
+        <span class="individualCode">{{secondCode}}</span>
+        <span class="individualCode">{{thirdCode}}</span>
+        <span class="individualCode">{{fourthCode}}</span>
+      </div>
+
+      <ion-item style="background-color: rgba(0,0,0,0)" no-lines>
+        <ion-range min="0" max="9999"(ionChange)="updateUniqueCode()"  [(ngModel)]="uniqueCode" color="aviqahPurple">
+          <!-- <ion-icon range-left small name="contrast"></ion-icon> -->
+          <!-- <ion-icon range-right name="contrast"></ion-icon> -->
+        </ion-range>
+      </ion-item>
+
+    </div>
+
+    <hr>
+    <ion-grid no-padding>
+        <ion-row no-padding>
+            <ion-col col-5 no-padding>
+                <span class="Content">Total Pembayaran</span>
+            </ion-col>
+            <ion-col col-7 text-right no-padding>
+                <span class="Content"><b>Rp. {{total_payment}}</b></span>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <button class="ButtonOptions" ion-button color="aviqahPurple" (click)="gotoPaymentMethod()" block><p class="ButtonWord">Pilih Metode Pembayaran</p></button>
+
+
+
+</ion-content>
