@@ -20,6 +20,7 @@ import { DatePicker } from '@ionic-native/date-picker';
 import { Autosize } from '../directives/autosize/autosize';
 import { PembayaranPage } from '../pages/pembayaran/pembayaran';
 import { PaketAqiqahPage } from '../pages/paket-aqiqah/paket-aqiqah';
+import { AqiqahSummaryPage } from '../pages/aqiqah-summary/aqiqah-summary';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { PaketAqiqahPage } from '../pages/paket-aqiqah/paket-aqiqah';
     Autosize,
     PembayaranPage,
     PaketAqiqahPage,
+    AqiqahSummaryPage,
     ListPage
   ],
   imports: [
@@ -52,6 +54,7 @@ import { PaketAqiqahPage } from '../pages/paket-aqiqah/paket-aqiqah';
     OrderAqiqahPage,
     PembayaranPage,
     PaketAqiqahPage,
+    AqiqahSummaryPage,
     ListPage
   ],
   providers: [

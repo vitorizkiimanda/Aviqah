@@ -17,7 +17,7 @@
                 <span class="Content">Total</span>
             </ion-col>
             <ion-col col-9 text-right no-padding>
-                <span class="Content">Rp. {{total_pemesanan}}</span>
+                <span class="Content">{{total_pemesanan_show}}</span>
             </ion-col>
         </ion-row>
     </ion-grid>
@@ -29,6 +29,9 @@
         <span class="individualCode">{{secondCode}}</span>
         <span class="individualCode">{{thirdCode}}</span>
         <span class="individualCode">{{fourthCode}}</span>
+      </div>
+      <div class="CodeNote">
+        <span>Isi kode unik sesuai keikhalasan Anda. Kode unik akan digunakan untuk donasi. 0 dapat diisi pada seluruh digit. Kode unik harus berbeda setiap pesanan agar verifikasi pembayaran lebih mudah.</span>
       </div>
 
       <ion-item style="background-color: rgba(0,0,0,0)" no-lines>
@@ -47,12 +50,20 @@
                 <span class="Content">Total Pembayaran</span>
             </ion-col>
             <ion-col col-7 text-right no-padding>
-                <span class="Content"><b>Rp. {{total_payment}}</b></span>
+                <span class="Content"><b>{{total_payment}}</b></span>
             </ion-col>
         </ion-row>
     </ion-grid>
+    <hr>
 
-    <button class="ButtonOptions" ion-button color="aviqahPurple" (click)="gotoPaymentMethod()" block><p class="ButtonWord">Pilih Metode Pembayaran</p></button>
+    <button class="ButtonOptions" ion-button color="light" (click)="selectPaymentMethod()" block>
+        <p *ngIf="!payment_method" class="ButtonWord">Pilih Metode Pembayaran</p>
+        <p *ngIf="payment_method" class="ButtonWord">Transfer <span class="UpperCase">{{payment_method}}</span></p>
+    </button>
+
+    <button class="ButtonOptions" ion-button color="aviqahPurple" (click)="gotoOrderSummary()" block>
+        <p class="ButtonWord">Selesaikan Pesanan</p>
+    </button>
 
 
 
