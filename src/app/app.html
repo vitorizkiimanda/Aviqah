@@ -9,7 +9,9 @@
       <ion-list class="MenuColor">
         <button class="MenuColorContent" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
           <ion-icon *ngIf="p.title=='Home'" name="md-home" class='iconSideMenu' color="dark"></ion-icon>
-          <ion-icon *ngIf="p.title=='List'" name="md-list" class='iconSideMenu' color="dark"></ion-icon>  
+          <ion-icon *ngIf="p.title=='List'" name="md-list" class='iconSideMenu' color="dark"></ion-icon>
+          <ion-icon *ngIf="p.title=='Profile'" name="md-person" class='iconSideMenu' color="dark"></ion-icon> 
+          <ion-icon *ngIf="p.title=='Login'" name="md-exit" class='iconSideMenu' color="dark"></ion-icon> 
           <span class="menuSideMenu">{{p.title}}</span>
         </button>
       </ion-list>

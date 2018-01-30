@@ -12,16 +12,20 @@ import { OnboardingPage } from '../pages/onboarding/onboarding';
 import { SignupPage } from '../pages/signup/signup';
 import { AqiqahPage } from '../pages/aqiqah/aqiqah';
 import { OrderAqiqahPage } from '../pages/order-aqiqah/order-aqiqah';
+import { PembayaranPage } from '../pages/pembayaran/pembayaran';
+import { PaketAqiqahPage } from '../pages/paket-aqiqah/paket-aqiqah';
+import { AqiqahSummaryPage } from '../pages/aqiqah-summary/aqiqah-summary';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { DatePicker } from '@ionic-native/date-picker';
 import { Autosize } from '../directives/autosize/autosize';
-import { PembayaranPage } from '../pages/pembayaran/pembayaran';
-import { PaketAqiqahPage } from '../pages/paket-aqiqah/paket-aqiqah';
-import { AqiqahSummaryPage } from '../pages/aqiqah-summary/aqiqah-summary';
 
+import { HttpModule } from '@angular/http';
+import { Storage } from '@ionic/storage';
+import { IonicStorageModule } from '@ionic/storage';
+import { Data } from '../providers/data';
 @NgModule({
   declarations: [
     MyApp,
@@ -40,6 +44,8 @@ import { AqiqahSummaryPage } from '../pages/aqiqah-summary/aqiqah-summary';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -60,6 +66,7 @@ import { AqiqahSummaryPage } from '../pages/aqiqah-summary/aqiqah-summary';
   providers: [
     StatusBar,
     
+    Data,
     NativePageTransitions,
     DatePicker,
 

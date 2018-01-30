@@ -7,7 +7,7 @@
               <button item-right class="ButtonLewati" clear ion-button><p class="Title">Daftar</p></button>
           </ion-col>
           <ion-col col-6 text-right>
-            <button item-right class="ButtonLewati" ion-button color="light" (click)="lewati()"><p class="ButtonWordLewati">Lewati</p></button>
+            <button item-right class="ButtonLewati" ion-button color="light" (click)="Lewati()"><p class="ButtonWordLewati">Lewati</p></button>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -53,6 +53,16 @@
       <p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left class="Warning">
         Password harus diisi
       </p>
+
+      <ion-item no-lines>
+        <ion-label ><ion-icon name="md-pin"></ion-icon></ion-label>
+        <ion-textarea class="Head2"  [(ngModel)]="address" name="addr" placeholder="Alamat" type="text" #addr="ngModel" required autosize></ion-textarea>
+      </ion-item>
+
+      <p ion-text [hidden]="addr.valid || submitted == false" color="danger" padding-left class="Warning">
+        Alamat harus diisi
+      </p>
+
     </ion-list>
 
     <ion-grid>

@@ -1,11 +1,14 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform,Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { OnboardingPage } from '../pages/onboarding/onboarding';
+import { Data } from '../providers/data';
+import { LoginPage } from '../pages/login/login';
+import { ProfilPage } from '../pages/profil/profil';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,18 +16,39 @@ import { OnboardingPage } from '../pages/onboarding/onboarding';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = OnboardingPage;
+  rootPage: any;
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+  constructor(
+    public platform: Platform, 
+    public statusBar: StatusBar, 
+    public splashScreen: SplashScreen,
+    public data: Data,
+    public events: Events) {
 
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
-    ];
+
+      events.subscribe('user:created', (user) => {
+        // user and time are the same arguments passed in `events.publish(user, time)`
+        console.log('Welcome', user, 'at');
+        if(user=='user'){
+          this.pages = [
+            { title: 'Home', component: HomePage },
+            { title: 'List', component: ListPage },
+            { title: 'Profile', component: ProfilPage }
+          ];
+  
+        }
+        else {
+          this.pages = [
+            { title: 'Home', component: HomePage },
+            { title: 'List', component: ListPage },
+            { title: 'Login', component: LoginPage }
+          ];
+        }
+      });
+
+    this.initializeApp();
 
   }
 
@@ -35,6 +59,22 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+
+    this.data.isLogin().then((value)=>{
+      if(value){
+
+        this.data.getRole().then((data) => {
+          console.log(data);
+          this.events.publish('user:created', data);
+        })
+
+
+        this.rootPage = HomePage;
+      } else {
+         this.rootPage = OnboardingPage;
+      }    
+    });
+
   }
 
   openPage(page) {
