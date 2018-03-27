@@ -1,16 +1,13 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NativePageTransitions,NativeTransitionOptions } from '@ionic-native/native-page-transitions';
-
-import { HomePage } from '../home/home';
-import { MyApp } from '../../app/app.component';
-
+import { OrderQurbanPage } from '../order-qurban/order-qurban';
 
 @Component({
-  selector: 'page-aqiqah-summary',
-  templateUrl: 'aqiqah-summary.html',
+  selector: 'page-qurban',
+  templateUrl: 'qurban.html',
 })
-export class AqiqahSummaryPage {
+export class QurbanPage {
 
   constructor(
     public navCtrl: NavController, 
@@ -19,12 +16,12 @@ export class AqiqahSummaryPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AqiqahSummaryPage');
+    console.log('ionViewDidLoad QurbanPage');
   }
 
-  gotoHome(){
+  order(){
     this.nativePageTransitions.fade(null);
-    this.navCtrl.setRoot(MyApp);
+    this.navCtrl.push(OrderQurbanPage);
   }
 
 }

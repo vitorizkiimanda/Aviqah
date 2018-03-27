@@ -1,0 +1,34 @@
+page-order-qurban {
+    .invisibleButton {
+        height:10px;
+        width:60px;
+    }
+
+    .Title{
+        font-size: 7vw;
+        color: white;   
+    }
+
+    .Header{
+        font-size: 6vw;
+    }
+
+    .Content{
+        font-size: 4.5vw;
+    }
+
+    .RincianContent{
+        margin-left: 10px;
+    }
+
+    .ButtonWord {
+        font-size: 5vw;
+        text-transform: capitalize;
+    }
+
+    .ButtonOptions {
+        margin-top:2vh;
+        height: 10vw !important;
+        // width: 100%;
+    }
+}

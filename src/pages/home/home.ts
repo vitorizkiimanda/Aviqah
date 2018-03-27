@@ -2,6 +2,7 @@ import { Component,ViewChild } from '@angular/core';
 import { NavController,Slides } from 'ionic-angular';
 import { NativePageTransitions,NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { AqiqahPage } from '../aqiqah/aqiqah';
+import { QurbanPage } from '../qurban/qurban';
 
 @Component({
   selector: 'page-home',
@@ -29,6 +30,11 @@ export class HomePage {
   gotoAqiqah() {
     this.nativePageTransitions.fade(null);
     this.navCtrl.push(AqiqahPage);
+  }
+
+  gotoQurban() {
+    this.nativePageTransitions.fade(null);
+    this.navCtrl.push(QurbanPage);
   }
 
 

@@ -26,6 +26,8 @@ import { HttpModule } from '@angular/http';
 import { Storage } from '@ionic/storage';
 import { IonicStorageModule } from '@ionic/storage';
 import { Data } from '../providers/data';
+import { QurbanPage } from '../pages/qurban/qurban';
+import { OrderQurbanPage } from '../pages/order-qurban/order-qurban';
 @NgModule({
   declarations: [
     MyApp,
@@ -40,6 +42,8 @@ import { Data } from '../providers/data';
     PembayaranPage,
     PaketAqiqahPage,
     AqiqahSummaryPage,
+    QurbanPage,
+    OrderQurbanPage,
     ListPage
   ],
   imports: [
@@ -61,6 +65,8 @@ import { Data } from '../providers/data';
     PembayaranPage,
     PaketAqiqahPage,
     AqiqahSummaryPage,
+    QurbanPage,
+    OrderQurbanPage,
     ListPage
   ],
   providers: [

@@ -1,0 +1,72 @@
+<ion-header>
+
+  <ion-navbar color="aviqahPurple" text-center>
+      <ion-title><span class="Title">Pesan Qurban</span><button ion-button clear class="invisibleButton"></button></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <span class="Header">Ananda</span>
+  <ion-list>
+
+      <ion-item no-lines>
+          <ion-label class="Content">Aviqah Andriani</ion-label>
+          <ion-checkbox item-right [(ngModel)]="AviqahAndriani"></ion-checkbox>
+      </ion-item>
+
+      <ion-item no-lines>
+          <ion-label class="Content">Andriani Aviqah</ion-label>
+          <ion-checkbox item-right [(ngModel)]="AndrianiAviqah"></ion-checkbox>
+      </ion-item>
+
+      <ion-item no-lines>
+          <ion-label class="Content">Aviqah Aviqah</ion-label>
+          <ion-checkbox item-right [(ngModel)]="AviqahAviqah"></ion-checkbox>
+      </ion-item>
+
+  </ion-list>
+  
+  <hr>
+  <span class="Header">Alamat Pengantaran</span>
+  <ion-item no-lines>
+      <ion-textarea class="Content"  [(ngModel)]="address" name="address" value="alamat default si user dari profilnya alamat default si user dari profilnya alamat default si user dari profilnya alamat default si user dari profilnya alamat default si user dari profilnya" type="text" #alamat="ngModel" required autosize></ion-textarea>
+  </ion-item>
+  <hr>
+  <span class="Header">Tanggal Pengiriman</span>
+  <ion-item no-lines>
+      <!-- <button class="ButtonMasuk" ion-button color="aviqahPurple" (click)="calendar()" block><p class="ButtonWord">Hari ini</p></button> -->
+      <ion-datetime class="Content" displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+  <hr>
+  <span class="Header">Rincian Hewan</span>
+  <ion-grid no-padding>
+      <ion-row no-padding>
+          <ion-col col-7 no-padding>
+              <span class="Content RincianContent">Jumlah Kambing</span>
+          </ion-col>
+          <ion-col col-5 no-padding>
+              <span class="Content">2 Ekor</span>
+          </ion-col>
+      </ion-row>
+      <ion-row no-padding>
+          <ion-col col-7 no-padding>
+              <span class="Content RincianContent">Biaya Pengiriman</span>
+          </ion-col>
+          <ion-col col-5 no-padding>
+              <span class="Content">Rp. 250000</span>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+  
+  <hr>
+
+  <button class="ButtonOptions" ion-button color="aviqahPurple" (click)="gotoPaket()" block><p class="ButtonWord">Pilih Paket Aqiqah</p></button>
+  <button class="ButtonOptions" ion-button color="light" (click)="gotoPayment()" block><p class="ButtonWord">Antarkan Hewan Saja</p></button>
+
+  
+
+
+</ion-content>

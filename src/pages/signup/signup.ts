@@ -18,7 +18,7 @@ export class SignupPage {
   lihat = true;
   email: string;
   password: string;
-  alamat: string;
+  // alamat: string;
   address: string;
   name:string;
 
@@ -57,7 +57,7 @@ export class SignupPage {
         nama: this.name,
         email: this.email,
         password: this.password,
-        alamat: this.address
+        // alamat: this.address
       };
         this.http.post(this.data.BASE_URL+"/daftar.php",input).subscribe(data => {
         let response = data.json();
