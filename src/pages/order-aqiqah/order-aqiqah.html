@@ -37,8 +37,7 @@
     <hr>
     <span class="Header">Tanggal Pengiriman</span>
     <ion-item no-lines>
-        <!-- <button class="ButtonMasuk" ion-button color="aviqahPurple" (click)="calendar()" block><p class="ButtonWord">Hari ini</p></button> -->
-        <ion-datetime class="Content" displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+        <ion-input type="date" class="Content"  [(ngModel)]="myDate"></ion-input>
     </ion-item>
     <hr>
     <span class="Header">Rincian Hewan</span>
