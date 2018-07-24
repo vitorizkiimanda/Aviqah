@@ -34,7 +34,7 @@ export class MyApp {
         if(user=='user'){
           this.pages = [
             { title: 'Home', component: HomePage },
-            { title: 'List', component: ListPage },
+            // { title: 'List', component: ListPage },
             { title: 'Profile', component: ProfilPage }
           ];
   
@@ -42,7 +42,7 @@ export class MyApp {
         else {
           this.pages = [
             { title: 'Home', component: HomePage },
-            { title: 'List', component: ListPage },
+            // { title: 'List', component: ListPage },
             { title: 'Login', component: LoginPage }
           ];
         }

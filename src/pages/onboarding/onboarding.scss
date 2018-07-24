@@ -13,7 +13,7 @@ page-onboarding {
     }
 
     .swiper-pagination-bullet-active{
-        background: #AB6ABA;
+        background: #363636;
         opacity: 1;
     }
 
@@ -27,14 +27,25 @@ page-onboarding {
     }
 
     .LogoMuser2 {
+        position: absolute;
+        top: 10vh;
+        left: 25vw;
+        display: block;
+
         width:50vw; /* you can use % */
         height: auto;
-        
     }
 
     .GambarSplash {
-        width:70vw; /* you can use % */
-        height: auto;
+        width:auto; /* you can use % */
+        height: 100vh;
+
+        margin: auto;
+    }
+
+    .Maskot {
+        display: block;
+        height: 40vh;
 
         margin: auto;
     }
@@ -43,6 +54,13 @@ page-onboarding {
     img {
         position: relative;
         
+    }
+
+    .Buttons{
+        position: absolute;
+        bottom: 10vh;
+        left: -.2vw;
+        display: block;
     }
 
     .ButtonWordWhite {
@@ -71,6 +89,30 @@ page-onboarding {
         // // width: 50vw;
         // margin: auto;
         // margin-top: 5vh;
+    }
+
+    .splash1{
+        // background-image: url('../assets/pict/SplashScreen-01.png');
+        // background: linear-gradient(#2387A4, #4AAFBE, #73D1DA);
+        background-color: #71a1c9;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .splash2{
+        // background-image: url('../assets/pict/SplashScreen-01.png');
+        // background: linear-gradient(#2387A4, #4AAFBE, #73D1DA);
+        background-color: #ae6cb7;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .splash3{
+        // background-image: url('../assets/pict/SplashScreen-01.png');
+        // background: linear-gradient(#2387A4, #4AAFBE, #73D1DA);
+        background-color: #83c15b;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
 }
