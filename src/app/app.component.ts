@@ -9,6 +9,8 @@ import { OnboardingPage } from '../pages/onboarding/onboarding';
 import { Data } from '../providers/data';
 import { LoginPage } from '../pages/login/login';
 import { ProfilPage } from '../pages/profil/profil';
+import { HistoryPage } from '../pages/history/history';
+import { ContactCenterPage } from '../pages/contact-center/contact-center';
 
 @Component({
   templateUrl: 'app.html'
@@ -38,8 +40,8 @@ export class MyApp {
             { title: 'Halaman Utama', component: HomePage },
             // { title: 'List', component: ListPage },
             { title: 'Akun Saya', component: ProfilPage },
-            { title: 'Pesanan Saya', component: ProfilPage },
-            { title: 'Pusat Kontak', component: ProfilPage }
+            { title: 'Pesanan Saya', component: HistoryPage },
+            { title: 'Pusat Kontak', component: ContactCenterPage }
           ];
   
         }

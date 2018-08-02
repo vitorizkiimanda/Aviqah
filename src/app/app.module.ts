@@ -28,6 +28,8 @@ import { IonicStorageModule } from '@ionic/storage';
 import { Data } from '../providers/data';
 import { QurbanPage } from '../pages/qurban/qurban';
 import { OrderQurbanPage } from '../pages/order-qurban/order-qurban';
+import { HistoryPage } from '../pages/history/history';
+import { ContactCenterPage } from '../pages/contact-center/contact-center';
 @NgModule({
   declarations: [
     MyApp,
@@ -44,6 +46,8 @@ import { OrderQurbanPage } from '../pages/order-qurban/order-qurban';
     AqiqahSummaryPage,
     QurbanPage,
     OrderQurbanPage,
+    HistoryPage,
+    ContactCenterPage,
     ListPage
   ],
   imports: [
@@ -67,6 +71,8 @@ import { OrderQurbanPage } from '../pages/order-qurban/order-qurban';
     AqiqahSummaryPage,
     QurbanPage,
     OrderQurbanPage,
+    HistoryPage,
+    ContactCenterPage,
     ListPage
   ],
   providers: [
