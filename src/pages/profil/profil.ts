@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { Data } from '../../providers/data';
 import { MyApp } from '../../app/app.component';
@@ -17,7 +17,8 @@ export class ProfilPage {
     public navCtrl: NavController, 
     public navParams: NavParams,
     private nativePageTransitions: NativePageTransitions,
-    // public alertCtrl: AlertController,
+    public alertCtrl: AlertController,
+    public loadCtrl: LoadingController,
     public data: Data) {
   }
 
@@ -26,9 +27,35 @@ export class ProfilPage {
   }
 
   logOut(){
-    this.data.logout();
-    this.nativePageTransitions.fade(null);
-    this.navCtrl.setRoot(MyApp);
+    let loading = this.loadCtrl.create({
+        content: 'memuat..'
+    });
+
+    const confirm = this.alertCtrl.create({
+      title: 'Log Out?',
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Log Out',
+          handler: () => {
+            console.log('Agree clicked');
+            
+            loading.present();
+            this.data.logout();
+            this.nativePageTransitions.fade(null);
+            this.navCtrl.setRoot(MyApp);
+            loading.dismiss();
+        
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
 }
