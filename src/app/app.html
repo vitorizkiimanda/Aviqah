@@ -1,17 +1,23 @@
 <ion-menu [content]="content">
     <ion-header no-border >
       <ion-toolbar color="aviqahPurple">
-        <ion-title><span class="UserName">Nama User</span></ion-title>
+        <div *ngIf="sideMenuCustom" style="padding-bottom: 1em;">
+          <img class="imageSideMenu" src="assets/pict/Profil.png"/>
+          <ion-title><span class="UserName">Nama User</span><br /><span class="UserEmail">emailuser@gmail.com</span></ion-title>
+        </div>
+        <div *ngIf="!sideMenuCustom">
+          <ion-title><span class="UserName">Aviqah</span></ion-title>
+        </div>
       </ion-toolbar>
     </ion-header>
   
     <ion-content class="MenuColor MenuContent">
       <ion-list class="MenuColor">
         <button class="MenuColorContent" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          <ion-icon *ngIf="p.title=='Home'" name="md-home" class='iconSideMenu' color="dark"></ion-icon>
-          <ion-icon *ngIf="p.title=='List'" name="md-list" class='iconSideMenu' color="dark"></ion-icon>
-          <ion-icon *ngIf="p.title=='Profile'" name="md-person" class='iconSideMenu' color="dark"></ion-icon> 
-          <ion-icon *ngIf="p.title=='Login'" name="md-exit" class='iconSideMenu' color="dark"></ion-icon> 
+          <ion-icon *ngIf="p.title=='Halaman Utama'" name="md-home" class='iconSideMenu' color="dark"></ion-icon>
+          <ion-icon *ngIf="p.title=='Pesanan Saya'" name="md-list" class='iconSideMenu' color="dark"></ion-icon>
+          <ion-icon *ngIf="p.title=='Akun Saya'" name="md-person" class='iconSideMenu' color="dark"></ion-icon> 
+          <ion-icon *ngIf="p.title=='Pusat Kontak'" name="md-information-circle" class='iconSideMenu' color="dark"></ion-icon> 
           <span class="menuSideMenu">{{p.title}}</span>
         </button>
       </ion-list>

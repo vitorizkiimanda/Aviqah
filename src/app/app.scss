@@ -20,7 +20,10 @@
     
     //font
     color: #202020;
+}
 
+.UserEmail{
+    font-size: 0.8em;
 }
 
 .menuSideMenu{
@@ -31,4 +34,11 @@
 .iconSideMenu {
     margin-right: 20px;
     font-size: 1.5em;
+}
+
+.imageSideMenu{
+    border-radius: 100%;
+    width: 30vw;
+    margin-left: 1em;
+    margin-top: 0.5em;
 }

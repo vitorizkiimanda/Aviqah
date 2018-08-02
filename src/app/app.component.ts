@@ -19,6 +19,7 @@ export class MyApp {
   rootPage: any;
 
   pages: Array<{title: string, component: any}>;
+  sideMenuCustom : boolean = false;
 
   constructor(
     public platform: Platform, 
@@ -32,14 +33,18 @@ export class MyApp {
         // user and time are the same arguments passed in `events.publish(user, time)`
         console.log('Welcome', user, 'at');
         if(user=='user'){
+          this.sideMenuCustom = true;
           this.pages = [
-            { title: 'Home', component: HomePage },
+            { title: 'Halaman Utama', component: HomePage },
             // { title: 'List', component: ListPage },
-            { title: 'Profile', component: ProfilPage }
+            { title: 'Akun Saya', component: ProfilPage },
+            { title: 'Pesanan Saya', component: ProfilPage },
+            { title: 'Pusat Kontak', component: ProfilPage }
           ];
   
         }
         else {
+          this.sideMenuCustom = false;
           this.pages = [
             { title: 'Home', component: HomePage },
             // { title: 'List', component: ListPage },
