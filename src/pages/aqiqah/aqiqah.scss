@@ -1,14 +1,13 @@
 page-aqiqah {
     .Title{
-        font-size: 7vw;
+        font-size: 1.25em;
         color: white;   
     }
 
     .ButtonRight{
-        font-size: 7vw;
+        font-size: 2em;
         position: relative;
-        top: 1vw;
-        right: 2vw;
+        right: 0.25em;
         text-align: right;
         color: white;
     }
@@ -19,7 +18,7 @@ page-aqiqah {
     }
 
     .content{
-        font-size: 4vw;
+        font-size: 1em;
         color: #202020;
         text-align: justify;
 
@@ -36,20 +35,12 @@ page-aqiqah {
     }
 
     ion-footer{
-        height: 7vh;
+        height: 3em;
     }
 
     .ButtonWord {
-        font-size: 6vw;
+        font-size: 1.5em;
         color: white;
-        text-transform: capitalize;
-
-        line-height: 7vh;
-
-        -webkit-margin-before: 0em;
-        -webkit-margin-after: 0em;
-        -webkit-margin-start: 0px;
-        -webkit-margin-end: 0px;
-        
+        text-transform: capitalize;       
     }
 }
