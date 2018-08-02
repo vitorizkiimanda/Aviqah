@@ -1,13 +1,64 @@
 page-profil {
 
     .Button {
-        height: 10vw !important;
+        height: 3em !important;
         // width: 100%;
     }
 
     .ButtonWord {
-        font-size: 5vw;
+        font-size: 1.5em;
         color: white;
         text-transform: capitalize;
     }
+
+    .photoprofile{
+        position: relative;
+        .crcl {
+            position: absolute;
+            margin-left: 55%;
+            margin-top: 20%;
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border-radius: 75px;
+        }
+        .editIcon{
+            position: absolute;
+            margin-left: 75vw;
+            margin-top: 40vw;
+            color: grey;
+        }
+    }
+
+    .Pict {
+        height: 50vw; 
+        width: 50vw; 
+        border-radius: 100%;
+        margin-top: 7vw;
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .Nama {
+        text-align: center;
+        color: #202020;
+        // font-size: 18px;
+        font-size: 6vw;
+        font-weight: 5px;
+    }
+
+    .Head {
+        margin-left: 4vw;
+        font-size: 1.25em;
+        font-weight: 6px;
+        color: gray;
+    }
+
+    .Konten {
+        margin-left: 4vw;
+        font-size: 1.25em;
+        color: #202020;
+    }
+
 }

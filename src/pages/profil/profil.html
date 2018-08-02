@@ -12,8 +12,33 @@
 
 <ion-content>
 
-  <ion-item no-lines padding-left-right>
-    <button class='Button' color="danger" ion-button block (click)='logOut()'><p class="ButtonWord">Keluar Akun</p></button>
-  </ion-item>
+    <div class="photoprofile">
+        <ion-icon name="camera" class="editIcon" (click)="updatePicture()"></ion-icon>
+        <img [src]="image" *ngIf="image" class="Pict"/>
+        <img src="assets/pict/Profil.png" *ngIf="!image" class="Pict"/>
+    </div>
+
+    
+    <ion-item padding-right text-wrap>    
+        <p class="Nama">Vito Rizki Imanda</p>
+    </ion-item>
+
+    <ion-item padding-right text-wrap>
+        <p class="Head">Email</p>
+        <p class="Konten">vitorizkiimanda@gmail.com</p>
+    </ion-item>
+    <ion-item padding-right text-wrap>
+        <p class="Head">Nomor Telepon</p>
+        <p class="Konten">089657011491</p>
+    </ion-item>
+    <ion-item padding-right text-wrap>
+        <p class="Head">Alamat</p>
+        <p class="Konten">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatum quas aspernatur, autem vero quasi repellat officia atque ab accusamus? Aspernatur adipisci quae eos placeat vitae ut nihil asperiores optio.</p>
+    </ion-item>
+    
+
+    <ion-item no-lines padding-left-right>
+        <button class='Button' color="danger" ion-button block (click)='logOut()'><p class="ButtonWord">Keluar Akun</p></button>
+    </ion-item>
 
 </ion-content>

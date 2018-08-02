@@ -10,6 +10,9 @@ import { MyApp } from '../../app/app.component';
 })
 export class ProfilPage {
 
+  image:any;
+
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
